@@ -5,7 +5,7 @@
 
 .orbit__ring {
   top: 360px;
-  left: 57%;
+  left: 50%;
   border: 2px solid #f0f2f5;
   border-radius: 50%;
   box-sizing: border-box;
@@ -35,12 +35,11 @@
 .orbit__sun {
   width: 120px;
   height: 120px;
-  margin: -60px;
+  margin: -85px;
   top: 360px;
-  left: 57%;
+  left: 50%;
   position: absolute;
   transition: all 1s ease;
-  background-color: black;
   border-radius: 50%;
   filter: drop-shadow(0 5px 7px rgba(0,0,0,.3));
 }
@@ -53,19 +52,13 @@
   perspective: 1000px;
   width: 68px;
   height: 68px;
-  margin: -34px;
+  margin: -100px -80px;
   top: 360px;
-  left: 57%;
+  left: 50%;
   backface-visibility: hidden;
   will-change: transform;
   position: absolute;
   transition: all 1s ease;
-}
-
-.orbit__sun-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .orbit__star--rotate-inner {
@@ -105,10 +98,6 @@
 .orbit__star-name5 {
   -webkit-animation-delay: -143s;
   animation-delay: -143s;
-}
-
-.orbit__sun img, .orbit__star img {
-  display: block;
 }
 
 @keyframes rotateInner {
