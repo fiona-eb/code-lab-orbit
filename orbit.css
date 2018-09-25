@@ -1,0 +1,136 @@
+.orbit {
+  position: relative;
+  min-height: 720px;
+}
+
+.orbit__ring {
+  top: 360px;
+  left: 57%;
+  border: 2px solid #f0f2f5;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: absolute;
+  transition: all 1s ease;
+}
+
+.orbit__ring--inner {
+  width: 320px;
+  height: 320px;
+  margin: -160px;
+}
+
+.orbit__ring--outer {
+  width: 520px;
+  height: 520px;
+  margin: -260px;
+}
+
+.orbit__ring--external {
+  border-color: rgba(240,242,245,.7);
+  width: 720px;
+  height: 720px;
+  margin: -360px;
+}
+
+.orbit__sun {
+  width: 120px;
+  height: 120px;
+  margin: -60px;
+  top: 360px;
+  left: 57%;
+  position: absolute;
+  transition: all 1s ease;
+  background-color: black;
+  border-radius: 50%;
+  filter: drop-shadow(0 5px 7px rgba(0,0,0,.3));
+}
+
+.orbit__star {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  transform: translateZ(0);
+  perspective: 1000px;
+  width: 68px;
+  height: 68px;
+  margin: -34px;
+  top: 360px;
+  left: 57%;
+  backface-visibility: hidden;
+  will-change: transform;
+  position: absolute;
+  transition: all 1s ease;
+}
+
+.orbit__sun-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit__star--rotate-inner {
+  -webkit-animation-name: rotateInner;
+  -webkit-animation-duration: 117s;
+  animation-name: rotateInner;
+  animation-duration: 117s;
+}
+
+.orbit__star--rotate-outer {
+  -webkit-animation-name: rotateOuter;
+  -webkit-animation-duration: 117s;
+  animation-name: rotateOuter;
+  animation-duration: 117s;
+}
+
+.orbit__star-name1 {
+  -webkit-animation-delay: -50s;
+  animation-delay: -50s;
+}
+
+.orbit__star-name2 {
+  -webkit-animation-delay: -120s;
+  animation-delay: -120s;
+}
+
+.orbit__star-name3 {
+  -webkit-animation-delay: -70s;
+  animation-delay: -70s;
+}
+
+.orbit__star-name4 {
+  -webkit-animation-delay: -100.8s;
+  animation-delay: -100.8s;
+}
+
+.orbit__star-name5 {
+  -webkit-animation-delay: -143s;
+  animation-delay: -143s;
+}
+
+.orbit__sun img, .orbit__star img {
+  display: block;
+}
+
+@keyframes rotateInner {
+  0% {
+    -webkit-transform: rotate(0deg) translate3d(160px,0,0) rotate(0deg);
+    transform: rotate(0deg) translate3d(160px,0,0) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(1turn) translate3d(160px,0,0) rotate(-1turn);
+    transform: rotate(1turn) translate3d(160px,0,0) rotate(-1turn);
+  }
+}
+
+@keyframes rotateOuter {
+  0% {
+    -webkit-transform: rotate(0deg) translate3d(260px,0,0) rotate(0deg);
+    transform: rotate(0deg) translate3d(260px,0,0) rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(1turn) translate3d(260px,0,0) rotate(-1turn);
+    transform: rotate(1turn) translate3d(260px,0,0) rotate(-1turn);
+  }
+}
